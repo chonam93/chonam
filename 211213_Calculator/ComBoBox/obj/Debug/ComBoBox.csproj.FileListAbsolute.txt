@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\obj\Debug\ComBoBox.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\obj\Debug\ComBoBox.Form1.resources
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\obj\Debug\ComBoBox.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\obj\Debug\ComBoBox.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\obj\Debug\ComBoBox.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\bin\Debug\ComBoBox.exe.config
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\bin\Debug\ComBoBox.exe
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\bin\Debug\ComBoBox.pdb
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\obj\Debug\ComBoBox.exe
+C:\Users\User\Desktop\chonam\211213_Calculator\ComBoBox\obj\Debug\ComBoBox.pdb
