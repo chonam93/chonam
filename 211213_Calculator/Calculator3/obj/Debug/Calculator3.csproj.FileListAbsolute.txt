@@ -8,3 +8,13 @@ C:\Users\User\Desktop\211213_Calculator\Calculator3\obj\Debug\Calculator3.csproj
 C:\Users\User\Desktop\211213_Calculator\Calculator3\obj\Debug\Calculator3.exe
 C:\Users\User\Desktop\211213_Calculator\Calculator3\obj\Debug\Calculator3.pdb
 C:\Users\User\Desktop\211213_Calculator\Calculator3\obj\Debug\Calculator3.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\obj\Debug\Calculator3.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\obj\Debug\Calculator3.Calculator.resources
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\obj\Debug\Calculator3.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\obj\Debug\Calculator3.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\obj\Debug\Calculator3.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\obj\Debug\Calculator3.exe
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\obj\Debug\Calculator3.pdb
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\bin\Debug\Calculator3.exe.config
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\bin\Debug\Calculator3.exe
+C:\Users\User\Desktop\chonam\211213_Calculator\Calculator3\bin\Debug\Calculator3.pdb

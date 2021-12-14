@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\bin\Debug\AccountBook.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\bin\Debug\AccountBook.exe
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\bin\Debug\AccountBook.pdb
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.fLogin.resources
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.fMain.resources
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.exe
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.pdb
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.fIN.resources
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.fOUT.resources

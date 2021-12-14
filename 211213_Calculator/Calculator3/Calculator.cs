@@ -11,11 +11,12 @@ using System.Windows.Forms;
 namespace Calculator3
 {
 
-    public enum Operators { Add, Sub, Multi, Div }
+    public enum Operators { Add, Sub, Multi, Div, Pow, sqr, sqrt }
 
     public partial class Calculator : Form
     {
-        public int Result = 0;
+        public double Result = 0;
+        public double answer = 0;
         public bool isNewNum = true;
         public Operators Opt = Operators.Add;
 
@@ -51,19 +52,11 @@ namespace Calculator3
 
         private void NumPlus_Click(object sender, EventArgs e)
         {
-            Button optButton = (Button)sender;
-            if (optButton.Text == "+")
-                Opt = Operators.Add;
-            else if (optButton.Text == "-")
-                Opt = Operators.Sub;
-            else if (optButton.Text == "x")
-                Opt = Operators.Multi;
-            else if (optButton.Text == "%")
-                Opt = Operators.Div;
 
             if (isNewNum == false)
             {
-                int num = int.Parse(NumScreen.Text);
+                double num = Double.Parse(NumScreen.Text);
+
                 if (Opt == Operators.Add)
                     Result = Result + num;
                 else if (Opt == Operators.Sub)
@@ -72,11 +65,28 @@ namespace Calculator3
                     Result = Result * num;
                 else if (Opt == Operators.Div)
                     Result = Result / num;
+                else if (Opt == Operators.Pow)
+                    Result = Math.Pow(Result, num);
+                else if (Opt == Operators.sqr)
+                    Result = num;
+                else if (Opt == Operators.sqrt)
+                    Result = num;
+
                 NumScreen.Text = Result.ToString();
                 /*새로운넘버입력*/
                 isNewNum = true;
             }
-
+            Button optButton = (Button)sender;
+            if (optButton.Text == "+")
+                Opt = Operators.Add;
+            else if (optButton.Text == "-")
+                Opt = Operators.Sub;
+            else if (optButton.Text == "x")
+                Opt = Operators.Multi;
+            else if (optButton.Text == "/")
+                Opt = Operators.Div;
+            else if (optButton.Text == "x^y")
+                Opt = Operators.Pow;
 
         }
 
@@ -87,5 +97,49 @@ namespace Calculator3
             Opt = Operators.Add;
             NumScreen.Text = "0";
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            NumScreen.Text += ".";
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            double num = Double.Parse(NumScreen.Text);
+            Result = num * num;
+            NumScreen.Text = Result.ToString();
+            isNewNum = true;
+            Opt = Operators.sqr;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            double num = Double.Parse(NumScreen.Text);
+            Result = Math.Sqrt(num);
+            NumScreen.Text = Result.ToString();
+            isNewNum = true;
+            Opt = Operators.sqrt;
+        }
+
+
+        /*        private void button19_Click(object sender, EventArgs e)
+                {
+                    Button button_num = (Button)sender;
+                    int pow_num1 = int.Parse(NumScreen.Text);
+                    int pow_num2 = int.Parse(button_num.Text);
+
+                    double num1, num2, Result;
+
+
+
+                    num1 = pow_num1;
+                    num2 = pow_num2;
+
+
+                    Result = Math.Pow(num1, num2);
+                    Console.WriteLine(Result);
+
+                }*/
+
     }
 }

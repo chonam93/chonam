@@ -46,7 +46,7 @@ namespace Calculator3
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@ namespace Calculator3
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(24, 218);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 68);
             this.button1.TabIndex = 0;
@@ -66,7 +66,7 @@ namespace Calculator3
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(128, 218);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 68);
             this.button2.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace Calculator3
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(96, 68);
             this.button4.TabIndex = 4;
-            this.button4.Text = "%";
+            this.button4.Text = "/";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.NumPlus_Click);
             // 
@@ -233,16 +233,17 @@ namespace Calculator3
             this.button16.TabIndex = 16;
             this.button16.Text = ".";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // button3
+            // Clear
             // 
-            this.button3.Location = new System.Drawing.Point(335, 369);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 68);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "C";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Clear.Location = new System.Drawing.Point(335, 369);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(96, 68);
+            this.Clear.TabIndex = 17;
+            this.Clear.Text = "C";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.button3_Click);
             // 
             // button17
             // 
@@ -250,8 +251,9 @@ namespace Calculator3
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(96, 68);
             this.button17.TabIndex = 18;
-            this.button17.Text = "( )";
+            this.button17.Text = "^2";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -261,6 +263,7 @@ namespace Calculator3
             this.button18.TabIndex = 19;
             this.button18.Text = "√";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -268,8 +271,9 @@ namespace Calculator3
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(96, 68);
             this.button19.TabIndex = 20;
-            this.button19.Text = "^";
+            this.button19.Text = "x^y";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.NumPlus_Click);
             // 
             // Calculator
             // 
@@ -281,7 +285,7 @@ namespace Calculator3
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -301,7 +305,7 @@ namespace Calculator3
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Calculator";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -327,7 +331,7 @@ namespace Calculator3
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;

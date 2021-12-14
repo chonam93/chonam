@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\bin\Debug\new_Calculator_1214.exe.config
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\bin\Debug\new_Calculator_1214.exe
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\bin\Debug\new_Calculator_1214.pdb
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\obj\Debug\new_Calculator_1214.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\obj\Debug\new_Calculator_1214.Form1.resources
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\obj\Debug\new_Calculator_1214.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\obj\Debug\new_Calculator_1214.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\obj\Debug\new_Calculator_1214.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\obj\Debug\new_Calculator_1214.exe
+C:\Users\User\Desktop\chonam\211213_Calculator\new_Calculator_1214\obj\Debug\new_Calculator_1214.pdb
