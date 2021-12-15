@@ -76,6 +76,7 @@ namespace AccountBook
             // 
             // tbType
             // 
+            this.tbType.ImeMode = System.Windows.Forms.ImeMode.Hangul;
             this.tbType.Location = new System.Drawing.Point(47, 48);
             this.tbType.Name = "tbType";
             this.tbType.Size = new System.Drawing.Size(200, 21);
@@ -92,6 +93,7 @@ namespace AccountBook
             // 
             // tbMemo
             // 
+            this.tbMemo.ImeMode = System.Windows.Forms.ImeMode.Hangul;
             this.tbMemo.Location = new System.Drawing.Point(47, 102);
             this.tbMemo.Multiline = true;
             this.tbMemo.Name = "tbMemo";

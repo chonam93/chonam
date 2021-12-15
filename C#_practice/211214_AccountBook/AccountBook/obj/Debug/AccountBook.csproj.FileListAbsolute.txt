@@ -11,3 +11,4 @@ C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debu
 C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.pdb
 C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.fIN.resources
 C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.fOUT.resources
+C:\Users\User\Desktop\chonam\C#_practice\211214_AccountBook\AccountBook\obj\Debug\AccountBook.fFileList.resources

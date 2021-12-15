@@ -47,11 +47,13 @@ namespace AccountBook
             // 
             // tbName
             // 
+            this.tbName.ImeMode = System.Windows.Forms.ImeMode.Hangul;
             this.tbName.Location = new System.Drawing.Point(12, 31);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(242, 21);
             this.tbName.TabIndex = 1;
             this.tbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbName_KeyDown);
             // 
             // tbPassword
             // 
@@ -61,6 +63,7 @@ namespace AccountBook
             this.tbPassword.Size = new System.Drawing.Size(242, 21);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyDown);
             // 
             // label2
             // 
@@ -104,9 +107,9 @@ namespace AccountBook
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnOK;
+        public System.Windows.Forms.TextBox tbName;
     }
 }

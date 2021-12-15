@@ -29,14 +29,27 @@ namespace AccountBook
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnIN = new System.Windows.Forms.ToolStripButton();
             this.btnOUT = new System.Windows.Forms.ToolStripButton();
             this.btnLogin = new System.Windows.Forms.ToolStripButton();
+            this.btnEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.switch_month = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbUserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sbSumIn = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sbSumOut = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sbSumSum = new System.Windows.Forms.ToolStripStatusLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.lv1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,13 +57,12 @@ namespace AccountBook
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
-            this.btnEdit = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.편집ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -61,7 +73,8 @@ namespace AccountBook
             this.btnLogin,
             this.btnEdit,
             this.btnDelete,
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.switch_month});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(758, 25);
@@ -96,28 +109,123 @@ namespace AccountBook
             this.btnLogin.Text = "로그인";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(51, 22);
+            this.btnEdit.Text = "편집";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(51, 22);
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSave,
+            this.btnLoad});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(91, 22);
+            this.toolStripDropDownButton1.Text = "test_Menu";
+            this.toolStripDropDownButton1.Visible = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(180, 22);
+            this.btnSave.Text = "저장하기";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(180, 22);
+            this.btnLoad.Text = "불러오기";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // switch_month
+            // 
+            this.switch_month.Image = ((System.Drawing.Image)(resources.GetObject("switch_month.Image")));
+            this.switch_month.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.switch_month.Name = "switch_month";
+            this.switch_month.Size = new System.Drawing.Size(63, 22);
+            this.switch_month.Text = "월변경";
+            this.switch_month.Click += new System.EventHandler(this.switch_month_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel2,
+            this.sbUserName,
+            this.toolStripStatusLabel5,
+            this.sbSumIn,
+            this.toolStripStatusLabel3,
+            this.sbSumOut,
             this.toolStripStatusLabel1,
-            this.sbUserName});
+            this.sbSumSum});
             this.statusStrip1.Location = new System.Drawing.Point(0, 441);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(758, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabel2
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(43, 17);
-            this.toolStripStatusLabel1.Text = "사용자";
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(43, 17);
+            this.toolStripStatusLabel2.Text = "사용자";
             // 
             // sbUserName
             // 
             this.sbUserName.Name = "sbUserName";
             this.sbUserName.Size = new System.Drawing.Size(16, 17);
             this.sbUserName.Text = "...";
+            // 
+            // toolStripStatusLabel5
+            // 
+            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(43, 17);
+            this.toolStripStatusLabel5.Text = "입금합";
+            // 
+            // sbSumIn
+            // 
+            this.sbSumIn.Name = "sbSumIn";
+            this.sbSumIn.Size = new System.Drawing.Size(14, 17);
+            this.sbSumIn.Text = "0";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(43, 17);
+            this.toolStripStatusLabel3.Text = "출금합";
+            // 
+            // sbSumOut
+            // 
+            this.sbSumOut.Name = "sbSumOut";
+            this.sbSumOut.Size = new System.Drawing.Size(14, 17);
+            this.sbSumOut.Text = "0";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(19, 17);
+            this.toolStripStatusLabel1.Text = "계";
+            // 
+            // sbSumSum
+            // 
+            this.sbSumSum.Name = "sbSumSum";
+            this.sbSumSum.Size = new System.Drawing.Size(14, 17);
+            this.sbSumSum.Text = "0";
             // 
             // lv1
             // 
@@ -127,6 +235,7 @@ namespace AccountBook
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.lv1.ContextMenuStrip = this.contextMenuStrip1;
             this.lv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lv1.FullRowSelect = true;
             this.lv1.GridLines = true;
@@ -138,6 +247,8 @@ namespace AccountBook
             this.lv1.TabIndex = 2;
             this.lv1.UseCompatibleStateImageBehavior = false;
             this.lv1.View = System.Windows.Forms.View.Details;
+            this.lv1.DoubleClick += new System.EventHandler(this.lv1_DoubleClick);
+            this.lv1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lv1_KeyDown);
             // 
             // columnHeader1
             // 
@@ -164,48 +275,27 @@ namespace AccountBook
             this.columnHeader5.Text = "비고";
             this.columnHeader5.Width = 200;
             // 
-            // btnDelete
+            // contextMenuStrip1
             // 
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(51, 22);
-            this.btnDelete.Text = "삭제";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.편집ToolStripMenuItem,
+            this.삭제ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 48);
             // 
-            // btnEdit
+            // 편집ToolStripMenuItem
             // 
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(51, 22);
-            this.btnEdit.Text = "편집";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.편집ToolStripMenuItem.Name = "편집ToolStripMenuItem";
+            this.편집ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.편집ToolStripMenuItem.Text = "편집";
+            this.편집ToolStripMenuItem.Click += new System.EventHandler(this.편집ToolStripMenuItem_Click);
             // 
-            // toolStripDropDownButton1
+            // 삭제ToolStripMenuItem
             // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnSave,
-            this.btnLoad});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(91, 22);
-            this.toolStripDropDownButton1.Text = "test_Menu";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(180, 22);
-            this.btnSave.Text = "저장하기";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(180, 22);
-            this.btnLoad.Text = "불러오기";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.삭제ToolStripMenuItem.Name = "삭제ToolStripMenuItem";
+            this.삭제ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.삭제ToolStripMenuItem.Text = "삭제";
+            this.삭제ToolStripMenuItem.Click += new System.EventHandler(this.삭제ToolStripMenuItem_Click);
             // 
             // fMain
             // 
@@ -218,10 +308,12 @@ namespace AccountBook
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "가계부";
+            this.Load += new System.EventHandler(this.fMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +326,7 @@ namespace AccountBook
         private System.Windows.Forms.ToolStripButton btnOUT;
         private System.Windows.Forms.ToolStripButton btnLogin;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel sbSumOut;
         private System.Windows.Forms.ToolStripStatusLabel sbUserName;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ListView lv1;
@@ -248,6 +340,16 @@ namespace AccountBook
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem btnSave;
         private System.Windows.Forms.ToolStripMenuItem btnLoad;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 편집ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 삭제ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
+        private System.Windows.Forms.ToolStripStatusLabel sbSumIn;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel sbSumSum;
+        private System.Windows.Forms.ToolStripButton switch_month;
     }
 }
 

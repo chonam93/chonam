@@ -76,6 +76,7 @@ namespace AccountBook
             // 
             // tbType
             // 
+            this.tbType.ImeMode = System.Windows.Forms.ImeMode.Hangul;
             this.tbType.Location = new System.Drawing.Point(47, 48);
             this.tbType.Name = "tbType";
             this.tbType.Size = new System.Drawing.Size(200, 21);
@@ -92,6 +93,7 @@ namespace AccountBook
             // 
             // tbMemo
             // 
+            this.tbMemo.ImeMode = System.Windows.Forms.ImeMode.Hangul;
             this.tbMemo.Location = new System.Drawing.Point(47, 102);
             this.tbMemo.Multiline = true;
             this.tbMemo.Name = "tbMemo";
@@ -115,7 +117,7 @@ namespace AccountBook
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // fIN
+            // fOUT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,7 +133,7 @@ namespace AccountBook
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "fIN";
+            this.Name = "fOUT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "입금";
             this.ResumeLayout(false);
