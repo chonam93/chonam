@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "study_Datatpye", "study_Datatpye.csproj", "{DBD27ADD-52EF-4002-9BC4-DB980A42EBB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBD27ADD-52EF-4002-9BC4-DB980A42EBB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD27ADD-52EF-4002-9BC4-DB980A42EBB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD27ADD-52EF-4002-9BC4-DB980A42EBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD27ADD-52EF-4002-9BC4-DB980A42EBB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E17E046-8022-402A-82AB-EBE0F1978E5A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\bin\Debug\study_Datatpye.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\bin\Debug\study_Datatpye.exe
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\bin\Debug\study_Datatpye.pdb
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\obj\Debug\study_Datatpye.Form1.resources
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\obj\Debug\study_Datatpye.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\obj\Debug\study_Datatpye.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\obj\Debug\study_Datatpye.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\obj\Debug\study_Datatpye.exe
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_Datatpye\obj\Debug\study_Datatpye.pdb

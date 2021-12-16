@@ -23,7 +23,7 @@ namespace AccountBook
             //메인폼 화면에 실행
             this.Show();
 
-            현재열린파일명 = AppDomain.CurrentDomain.BaseDirectory + "Data\\" + DateTime.Now.ToString("yyyy-MM-dd") + ".csv";
+            현재열린파일명 = AppDomain.CurrentDomain.BaseDirectory + "Data\\" + DateTime.Now.ToString("yyyy-MM") + ".csv";
             userLogin();
         }
 
@@ -75,11 +75,14 @@ namespace AccountBook
                 //데이터를 추가
                 //>>데이터읽기
 
+                long 금액1 = long.Parse(금액);
+
+                string 입금액 = 금액1.ToString("N0");
 
                 //목록 추가
                 ListViewItem lv = lv1.Items.Add(입력일.ToShortDateString());
                 lv.SubItems.Add(분류);//분류
-                lv.SubItems.Add(금액);//금액
+                lv.SubItems.Add(입금액);//금액
                 lv.SubItems.Add("");//출금
                 lv.SubItems.Add(비고);//비고
 
@@ -105,12 +108,15 @@ namespace AccountBook
                 //데이터를 추가
                 //>>데이터읽기
 
+                long 금액1 = long.Parse(금액);
+
+                string 출금액 = 금액1.ToString("N0");
 
                 //목록 추가
                 ListViewItem lv = lv1.Items.Add(입력일.ToShortDateString());
                 lv.SubItems.Add(분류);//분류
                 lv.SubItems.Add("");//입금
-                lv.SubItems.Add(금액);//금액
+                lv.SubItems.Add(출금액);//금액
                 lv.SubItems.Add(비고);//비고
                 Summary();
                 saveData();
@@ -266,6 +272,9 @@ namespace AccountBook
                 return;
             }
 
+            string 선택월 = 파일명.Substring(파일명.LastIndexOf("\\") + 1,7);
+            tbMonth.Text = 선택월;
+
             //목록 초기화
             lv1.Items.Clear();
 
@@ -273,6 +282,7 @@ namespace AccountBook
             string[] 내용 = System.IO.File.ReadAllLines(파일명, System.Text.Encoding.UTF8);
 
             int 건수 = 내용.Length;
+            
             for (int i = 1; i < 건수; i++)
             {
                 string 줄내용 = 내용[i];
@@ -286,6 +296,7 @@ namespace AccountBook
 
                 long 입금액 = long.Parse(줄버퍼[2]);
                 long 출금액 = long.Parse(줄버퍼[3]);
+
 
                 if (입금액 != 0)
                     item.SubItems.Add(입금액.ToString("N0"));
@@ -330,8 +341,9 @@ namespace AccountBook
             int 목록건수 = this.lv1.Items.Count;
             int 입금총합 = 0;
             int 출금총합 = 0;
-
-            for(int i = 0; i < 목록건수; i++)
+            long 잔액 = 0;
+            
+            for (int i = 0; i < 목록건수; i++)
             {
                 ListViewItem item = lv1.Items[i];
                 string 입금 = item.SubItems[2].Text.Replace(",","");
@@ -345,13 +357,13 @@ namespace AccountBook
                 
                 입금총합 += 입금액;
                 출금총합 += 출금액;
-                
 
+                잔액 += 입금액 - 출금액;
             }
 
             sbSumIn.Text = 입금총합.ToString("N0");
             sbSumOut.Text = 출금총합.ToString("N0");
-            sbSumSum.Text = (입금총합 - 출금총합).ToString("N0");
+            sbAmt.Text = 잔액.ToString("N0");
         }
 
         private void switch_month_Click(object sender, EventArgs e)
@@ -364,5 +376,45 @@ namespace AccountBook
             }
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var dlg = MessageBox.Show("마감확인? \n\n", "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg != System.Windows.Forms.DialogResult.Yes) return;
+            //월마감
+            //불러오기
+            string 선택월 = tbMonth.Text;
+            string 저장폴더 = AppDomain.CurrentDomain.BaseDirectory/*현재파일주소*/ + "Data";
+
+            //2021-12
+            DateTime 현재월 = DateTime.Parse(선택월 + "-01");
+            DateTime 다음월 = 현재월.AddMonths(1);
+            string 파일명 = 다음월.ToString("yyyy_MM") + ".csv";
+            string 전체파일명 = 저장폴더 + "\\" + 파일명;
+
+            int 잔액 = int.Parse(sbAmt.Text.Replace(",",""));
+        
+
+
+
+
+            string 내용 = "날짜,분류,입금,출금,비고";
+            string 날짜 = 다음월.ToString("yyyy_MM_dd");
+            string 분류 = "잔액이월";
+            string 입금 = 잔액.ToString();
+            string 출금 = "";
+            string 비고 = string.Format("{0}월 잔액이월", 현재월.ToString("yyyy_MM"));
+            내용 += "\n" + 날짜 + "," + 분류 + "," + 입금 + "," + 출금 + "," + 비고;
+
+
+            System.IO.File.WriteAllText(전체파일명, 내용, System.Text.Encoding.UTF8);
+            Console.WriteLine("저장파일명=" + 파일명);
+
+            현재열린파일명 = 전체파일명;
+            loadData();
+            
+        }
+
+
     }
 }

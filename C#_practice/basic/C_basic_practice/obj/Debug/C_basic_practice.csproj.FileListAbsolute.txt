@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\chonam\C#_practice\basic\C_basic_practice\bin\Debug\C_basic_practice.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\basic\C_basic_practice\bin\Debug\C_basic_practice.exe
+C:\Users\User\Desktop\chonam\C#_practice\basic\C_basic_practice\bin\Debug\C_basic_practice.pdb
+C:\Users\User\Desktop\chonam\C#_practice\basic\C_basic_practice\obj\Debug\C_basic_practice.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\C#_practice\basic\C_basic_practice\obj\Debug\C_basic_practice.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\basic\C_basic_practice\obj\Debug\C_basic_practice.exe
+C:\Users\User\Desktop\chonam\C#_practice\basic\C_basic_practice\obj\Debug\C_basic_practice.pdb

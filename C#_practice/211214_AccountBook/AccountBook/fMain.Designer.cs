@@ -37,19 +37,21 @@ namespace AccountBook
             this.btnLogin = new System.Windows.Forms.ToolStripButton();
             this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.switch_month = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLoad = new System.Windows.Forms.ToolStripMenuItem();
-            this.switch_month = new System.Windows.Forms.ToolStripButton();
+            this.btnConfirm = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbUserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tbMonth = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbSumIn = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbSumOut = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.sbSumSum = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.lv1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,6 +62,7 @@ namespace AccountBook
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.편집ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sbAmt = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -73,8 +76,9 @@ namespace AccountBook
             this.btnLogin,
             this.btnEdit,
             this.btnDelete,
+            this.switch_month,
             this.toolStripDropDownButton1,
-            this.switch_month});
+            this.btnConfirm});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(758, 25);
@@ -127,6 +131,15 @@ namespace AccountBook
             this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // switch_month
+            // 
+            this.switch_month.Image = ((System.Drawing.Image)(resources.GetObject("switch_month.Image")));
+            this.switch_month.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.switch_month.Name = "switch_month";
+            this.switch_month.Size = new System.Drawing.Size(63, 22);
+            this.switch_month.Text = "월변경";
+            this.switch_month.Click += new System.EventHandler(this.switch_month_Click);
+            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -142,37 +155,39 @@ namespace AccountBook
             // btnSave
             // 
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(180, 22);
+            this.btnSave.Size = new System.Drawing.Size(122, 22);
             this.btnSave.Text = "저장하기";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnLoad
             // 
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(180, 22);
+            this.btnLoad.Size = new System.Drawing.Size(122, 22);
             this.btnLoad.Text = "불러오기";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // switch_month
+            // btnConfirm
             // 
-            this.switch_month.Image = ((System.Drawing.Image)(resources.GetObject("switch_month.Image")));
-            this.switch_month.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.switch_month.Name = "switch_month";
-            this.switch_month.Size = new System.Drawing.Size(63, 22);
-            this.switch_month.Text = "월변경";
-            this.switch_month.Click += new System.EventHandler(this.switch_month_Click);
+            this.btnConfirm.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.Image")));
+            this.btnConfirm.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(63, 22);
+            this.btnConfirm.Text = "월마감";
+            this.btnConfirm.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel2,
             this.sbUserName,
+            this.toolStripStatusLabel6,
+            this.tbMonth,
             this.toolStripStatusLabel5,
             this.sbSumIn,
             this.toolStripStatusLabel3,
             this.sbSumOut,
-            this.toolStripStatusLabel1,
-            this.sbSumSum});
+            this.toolStripStatusLabel4,
+            this.sbAmt});
             this.statusStrip1.Location = new System.Drawing.Point(0, 441);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(758, 22);
@@ -190,6 +205,18 @@ namespace AccountBook
             this.sbUserName.Name = "sbUserName";
             this.sbUserName.Size = new System.Drawing.Size(16, 17);
             this.sbUserName.Text = "...";
+            // 
+            // toolStripStatusLabel6
+            // 
+            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(43, 17);
+            this.toolStripStatusLabel6.Text = "선택월";
+            // 
+            // tbMonth
+            // 
+            this.tbMonth.Name = "tbMonth";
+            this.tbMonth.Size = new System.Drawing.Size(17, 17);
+            this.tbMonth.Text = "__";
             // 
             // toolStripStatusLabel5
             // 
@@ -215,17 +242,11 @@ namespace AccountBook
             this.sbSumOut.Size = new System.Drawing.Size(14, 17);
             this.sbSumOut.Text = "0";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabel4
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(19, 17);
-            this.toolStripStatusLabel1.Text = "계";
-            // 
-            // sbSumSum
-            // 
-            this.sbSumSum.Name = "sbSumSum";
-            this.sbSumSum.Size = new System.Drawing.Size(14, 17);
-            this.sbSumSum.Text = "0";
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(31, 17);
+            this.toolStripStatusLabel4.Text = "잔액";
             // 
             // lv1
             // 
@@ -297,6 +318,12 @@ namespace AccountBook
             this.삭제ToolStripMenuItem.Text = "삭제";
             this.삭제ToolStripMenuItem.Click += new System.EventHandler(this.삭제ToolStripMenuItem_Click);
             // 
+            // sbAmt
+            // 
+            this.sbAmt.Name = "sbAmt";
+            this.sbAmt.Size = new System.Drawing.Size(14, 17);
+            this.sbAmt.Text = "0";
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -347,9 +374,12 @@ namespace AccountBook
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel sbSumIn;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel sbSumSum;
         private System.Windows.Forms.ToolStripButton switch_month;
+        private System.Windows.Forms.ToolStripButton btnConfirm;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        private System.Windows.Forms.ToolStripStatusLabel tbMonth;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolStripStatusLabel sbAmt;
     }
 }
 

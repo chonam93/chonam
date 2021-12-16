@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\bin\Debug\study_string.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\bin\Debug\study_string.exe
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\bin\Debug\study_string.pdb
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\obj\Debug\study_string.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\obj\Debug\study_string.Form1.resources
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\obj\Debug\study_string.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\obj\Debug\study_string.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\obj\Debug\study_string.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\obj\Debug\study_string.exe
+C:\Users\User\Desktop\chonam\C#_practice\youtube_Class\study_string\obj\Debug\study_string.pdb
