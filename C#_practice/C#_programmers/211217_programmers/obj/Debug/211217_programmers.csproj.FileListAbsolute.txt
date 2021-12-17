@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\chonam\C#_practice\C#_programmers\211217_programmers\bin\Debug\211217_programmers.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\C#_programmers\211217_programmers\bin\Debug\211217_programmers.exe
+C:\Users\User\Desktop\chonam\C#_practice\C#_programmers\211217_programmers\bin\Debug\211217_programmers.pdb
+C:\Users\User\Desktop\chonam\C#_practice\C#_programmers\211217_programmers\obj\Debug\211217_programmers.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\C#_practice\C#_programmers\211217_programmers\obj\Debug\211217_programmers.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\C#_programmers\211217_programmers\obj\Debug\211217_programmers.exe
+C:\Users\User\Desktop\chonam\C#_practice\C#_programmers\211217_programmers\obj\Debug\211217_programmers.pdb
