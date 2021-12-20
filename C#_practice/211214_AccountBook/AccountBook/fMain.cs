@@ -95,7 +95,7 @@ namespace AccountBook
 
         private void btnOUT_Click(object sender, EventArgs e)
         {
-            fIN f = new fIN();
+            fOUT f = new fOUT();
 
             DialogResult result = f.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)

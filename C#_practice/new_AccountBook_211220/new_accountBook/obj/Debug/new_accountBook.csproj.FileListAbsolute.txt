@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\bin\Debug\new_accountBook.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\bin\Debug\new_accountBook.exe
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\bin\Debug\new_accountBook.pdb
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.exe
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.pdb
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.fIN.resources
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.fMain.resources
+C:\Users\User\Desktop\chonam\C#_practice\new_AccountBook_211220\new_accountBook\obj\Debug\new_accountBook.fOUT.resources
