@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\bin\Debug\new2_account.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\bin\Debug\new2_account.exe
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\bin\Debug\new2_account.pdb
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.fIN.resources
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.fMain.resources
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.exe
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.pdb
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.fOUT.resources
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.fLogin.resources
