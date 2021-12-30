@@ -64,6 +64,12 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fileList.Designer.cs">
+      <DependentUpon>fileList.cs</DependentUpon>
+    </Compile>
     <Compile Include="fOUT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fileList.resx">
+      <DependentUpon>fileList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fOUT.resx">
       <DependentUpon>fOUT.cs</DependentUpon>

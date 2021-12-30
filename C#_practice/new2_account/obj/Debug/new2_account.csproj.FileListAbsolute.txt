@@ -11,3 +11,4 @@ C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.exe
 C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.pdb
 C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.fOUT.resources
 C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.fLogin.resources
+C:\Users\User\Desktop\chonam\C#_practice\new2_account\obj\Debug\new2_account.fileList.resources

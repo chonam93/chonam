@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.fMain.resources
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.fResume.resources
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.Properties.Resources.resources
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.csproj.GenerateResource.cache
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\chonam\C#_practice\resume\bin\Debug\resume.exe.config
+C:\Users\User\Desktop\chonam\C#_practice\resume\bin\Debug\resume.exe
+C:\Users\User\Desktop\chonam\C#_practice\resume\bin\Debug\resume.pdb
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.exe
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.pdb
+C:\Users\User\Desktop\chonam\C#_practice\resume\obj\Debug\resume.fLogin.resources

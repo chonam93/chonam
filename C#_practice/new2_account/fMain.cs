@@ -12,6 +12,8 @@ namespace new2_account
 {
     public partial class fMain : Form
     {
+        string 현재열린파일명 = "";
+
         public fMain()
         {
             InitializeComponent();
@@ -21,7 +23,10 @@ namespace new2_account
         private void fMain_Load(object sender, EventArgs e)
         {
             this.Show(); //메인화면 띄우고
+            현재열린파일명 = AppDomain.CurrentDomain.BaseDirectory + "Data2\\" + DateTime.Now.ToString("yyyy-MM") + ".csv";
+
             user_Login(); //그 위에 로그인 창 실행
+            loadData();
         }
         void user_Login()
         {
@@ -78,8 +83,6 @@ namespace new2_account
                 lv.SubItems.Add(비고);
 
             }
-
-            save_data();
             summary();
         }
 
@@ -104,14 +107,12 @@ namespace new2_account
                 lv.SubItems.Add(출금액);
                 lv.SubItems.Add(비고);
             }
-            save_data();
             summary();
         }
 
         private void fEdit_Click(object sender, EventArgs e)
         {
             edit_data();
-            save_data();
             summary();
         }
         void edit_data()
@@ -172,7 +173,6 @@ namespace new2_account
         private void fDelete_Click(object sender, EventArgs e)
         {
             delete_data();
-            save_data();
             summary();
         }
         void delete_data()
@@ -199,7 +199,8 @@ namespace new2_account
         void save_data()
         {
             string 저장폴더 = AppDomain.CurrentDomain.BaseDirectory + "Data2";
-            
+            string 파일명 = 저장폴더 + "\\" + DateTime.Now.ToString("yyyy-MM") + ".csv";
+
             string rows = "날짜,분류,입금,출금,비고";
 
             if (System.IO.Directory.Exists(저장폴더) == false)
@@ -219,12 +220,72 @@ namespace new2_account
                 rows += "\n" + 날짜 + "," + 분류 + "," + 입금 + "," + 출금 + "," + 비고;
             }
 
-            string 파일명 = 저장폴더 + "\\" + DateTime.Now.ToString("yyyy-MM") + ".csv";
             System.IO.File.WriteAllText(파일명, rows, Encoding.UTF8);
             Console.WriteLine("저장파일명 : " + 파일명);
             Console.WriteLine("저장내용 : " + rows);
 
         }
+        void loadData()
+        {
+            //불러오기
+            string 저장폴더 = AppDomain.CurrentDomain.BaseDirectory/*현재파일주소*/ + "Data2";
+
+            DateTime 현재시간 = DateTime.Now;
+            string 파일명 = 현재열린파일명;//저장폴더 + "\\" + 현재시간.ToString("yyyy-MM-dd")+".csv";
+
+            //파일이 없으면 사용 불가
+            if (System.IO.File.Exists(파일명) == false)
+            {
+                MessageBox.Show("저장된 파일이 없습니다\n\n" + 파일명, "확인", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string 선택월 = 파일명.Substring(파일명.LastIndexOf("\\") + 1, 7);
+            tbMonth.Text = 선택월;
+
+            //목록 초기화
+            listView1.Items.Clear();
+
+            //파일을 읽는다 
+            string[] 내용 = System.IO.File.ReadAllLines(파일명, System.Text.Encoding.UTF8);
+
+            int 건수 = 내용.Length;
+
+            for (int i = 1; i < 건수; i++)
+            {
+                string 줄내용 = 내용[i];
+                string[] 줄버퍼 = 줄내용.Split(',');
+
+                ListViewItem item = listView1.Items.Add(줄버퍼[0]);
+                item.SubItems.Add(줄버퍼[1]);
+
+                if (줄버퍼[2] == "") 줄버퍼[2] = "0";
+                if (줄버퍼[3] == "") 줄버퍼[3] = "0";
+
+                long 입금액 = long.Parse(줄버퍼[2]);
+                long 출금액 = long.Parse(줄버퍼[3]);
+
+
+                if (입금액 != 0)
+                    item.SubItems.Add(입금액.ToString("N0"));
+                else
+                    item.SubItems.Add("");
+
+                if (출금액 != 0)
+                    item.SubItems.Add(출금액.ToString("N0"));
+                else
+                    item.SubItems.Add("");
+
+                item.SubItems.Add(줄버퍼[4]);
+            }
+            summary();
+
+            Console.WriteLine("저장된내용=" + 내용);
+        }
+
+
+
+
 
         void summary()
         {
@@ -245,8 +306,77 @@ namespace new2_account
 
             tbInSum.Text = 입금합.ToString("N0");
             tbOutSum.Text = 출금합.ToString("N0");
+            tbSumSum.Text = (입금합 - 출금합).ToString("N0");
+
         }
 
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            edit_data();
+        }
 
+        private void fsave_Click(object sender, EventArgs e)
+        {
+            string 파일명 = 현재열린파일명.Substring(현재열린파일명.LastIndexOf("\\") + 1, 7);
+            MessageBox.Show("저장하시겠습니까?\n\n 파일명 : " + 파일명, "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            save_data();
+        }
+
+        private void switchMonth_Click(object sender, EventArgs e)
+        {
+
+            fileList f = new fileList();
+            if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                현재열린파일명 = f.선택된파일명;
+                loadData();
+            }
+
+            
+        }
+
+        private void endMonth_Click(object sender, EventArgs e)
+        {
+
+            var dlg = MessageBox.Show("마감확인? \n\n", "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg != System.Windows.Forms.DialogResult.Yes) return;
+            //월마감
+            //불러오기
+            string 선택월 = tbMonth.Text;
+            string 저장폴더 = AppDomain.CurrentDomain.BaseDirectory/*현재파일주소*/ + "Data2";
+
+            //2021-12
+            DateTime 현재월 = DateTime.Parse(선택월 + "-01");
+            DateTime 다음월 = 현재월.AddMonths(1);
+            string 파일명 = 다음월.ToString("yyyy-MM") + ".csv";
+            string 전체파일명 = 저장폴더 + "\\" + 파일명;
+
+            //if (System.IO.File.Exists(전체파일명) == true) return;
+
+
+            long 잔액 = long.Parse(tbSumSum.Text.Replace(",", ""));
+
+
+
+
+
+            string 내용 = "날짜,분류,입금,출금,비고";
+            string 날짜 = 다음월.ToString("yyyy_MM_dd");
+            string 분류 = "잔액이월";
+            string 입금 = 잔액.ToString();
+            string 출금 = "";
+            string 비고 = string.Format("{0}월 잔액이월", 현재월.ToString("yyyy_MM"));
+            내용 += "\n" + 날짜 + "," + 분류 + "," + 입금 + "," + 출금 + "," + 비고;
+
+
+            System.IO.File.WriteAllText(전체파일명, 내용, System.Text.Encoding.UTF8);
+            Console.WriteLine("저장파일명=" + 파일명);
+
+            현재열린파일명 = 전체파일명;
+            loadData();
+
+            
+
+        }
     }
 }
